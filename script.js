@@ -16,6 +16,7 @@ function sendNumberValue(number){
     }
 }
 function addDecimal(){
+    if(awaitingNextValue) return;
     if(!calculatorDisplay.textContent.includes('.')){
         calculatorDisplay.textContent = `${calculatorDisplay.textContent}.`;
     }
