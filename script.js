@@ -3,7 +3,8 @@ const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
 
 function sendNumberValue(number){
-    console.log(number);
+    const displayValue = calculatorDisplay.textContent;
+    calculatorDisplay.textContent = displayValue === '0' ? number : displayValue + number;
 }
 
 inputBtns.forEach((inputBtn) =>{
